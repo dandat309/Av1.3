@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bhfr8me164bvh"]
+
+[ext_resource type="Script" uid="uid://ewvefd66mhqg" path="res://CENAS/steve.gd" id="1_sc1un"]
+[ext_resource type="Texture2D" uid="uid://b7gfa1idgos1g" path="res://Steven_Universe_sprite.png" id="2_sc1un"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_is8u0"]
+size = Vector3(1.2607422, 1.2750244, 0.16404724)
+
+[node name="Steve" type="CharacterBody3D" unique_id=2100577640 groups=["Player"]]
+script = ExtResource("1_sc1un")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=581261340]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.020657092, 0.20864825, -0.033857107)
+texture = ExtResource("2_sc1un")
+
+[node name="coli" type="CollisionShape3D" parent="." unique_id=369835374]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.014455318, 0.21119174, 0.01175037)
+shape = SubResource("BoxShape3D_is8u0")
+debug_color = Color(0.78431374, 0.43529412, 0, 1)

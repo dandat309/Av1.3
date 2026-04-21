@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://clqgygt6d3wcu"]
+
+[ext_resource type="PackedScene" uid="uid://bhfr8me164bvh" path="res://CENAS/steve.tscn" id="1_pq8q7"]
+[ext_resource type="Script" uid="uid://cu60r0fdt2tpi" path="res://root.gd" id="1_pyidc"]
+[ext_resource type="PackedScene" uid="uid://b7xncrfdx13y8" path="res://CENAS/projetil.tscn" id="3_vvh5c"]
+
+[node name="Root" type="Node3D" unique_id=1550671298]
+script = ExtResource("1_pyidc")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=613967497]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.154388, 0, -23.63678)
+use_collision = true
+size = Vector3(122.560486, 0.5, 134.328)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=497125294]
+transform = Transform3D(1, 0, 0, 0, 0.64278764, 0.76604444, 0, -0.76604444, 0.64278764, -0.096364975, 7.9911313, 9.029298)
+
+[node name="Projetil" parent="." unique_id=1286559367 instance=ExtResource("3_vvh5c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.348058, 0)
+
+[node name="Steve" parent="." unique_id=2100577640 instance=ExtResource("1_pq8q7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.096364975, 1.8215928, 0.93488026)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=899357446]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="WorldEnvironment" unique_id=892546848]
+transform = Transform3D(1, 0, 0, 0, 0.7071068, 0.7071068, 0, -0.7071068, 0.7071068, -0.096364975, 7.077913, 14.296082)
+omni_range = 337.07413
+omni_attenuation = -3.554
