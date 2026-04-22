@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cmu7ysixh68cy"]
+
+[ext_resource type="Texture2D" uid="uid://cf76vbwu6jju5" path="res://icon.svg" id="1_lvuu3"]
+
+[node name="Marcador" type="Node3D" unique_id=1745333003]
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1805185481]
+texture = ExtResource("1_lvuu3")

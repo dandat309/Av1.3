@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://crc0imkuqwegb"]
+
+[ext_resource type="Texture2D" uid="uid://brv7wakokh5aw" path="res://cursor (1).png" id="1_4dvx7"]
+[ext_resource type="Script" uid="uid://v7yrhspntbv" path="res://projetil.gd" id="1_e138m"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e138m"]
+size = Vector3(0.60386276, 0.73342514, 0.21289063)
+
+[node name="Projetil" type="CharacterBody3D" unique_id=1588599541]
+script = ExtResource("1_e138m")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2019270451]
+transform = Transform3D(1.7142763, 0, 0, 0, 1.4858292, 0, 0, 0, 1.515871, -0.007297784, -0.04608497, 0.031299353)
+shape = SubResource("BoxShape3D_e138m")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1145932670]
+transform = Transform3D(0.24354348, 0, 0, 0, 0.24354348, 0, 0, 0, 0.24354348, 0, 0, 0)
+texture = ExtResource("1_4dvx7")

@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://14ldeld0kba3"]
+
+[ext_resource type="Script" uid="uid://vygm5v23prr7" path="res://test_scene.gd" id="1_sasra"]
+[ext_resource type="PackedScene" uid="uid://cmajgq7gxh5fq" path="res://player.tscn" id="2_sasra"]
+[ext_resource type="PackedScene" uid="uid://cuvd4ufagnvds" path="res://DeathBlock.tscn" id="3_sasra"]
+[ext_resource type="PackedScene" uid="uid://crc0imkuqwegb" path="res://projetil.tscn" id="4_coq8p"]
+
+[sub_resource type="Environment" id="Environment_ia1lp"]
+background_mode = 1
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.24
+glow_enabled = true
+
+[node name="root" type="Node3D" unique_id=1591079529]
+script = ExtResource("1_sasra")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1356440074]
+environment = SubResource("Environment_ia1lp")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1699529841]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.3748703, 4.80221, -15.387449)
+light_energy = 3.225
+light_indirect_energy = 10.697
+shadow_enabled = true
+omni_range = 107.26113
+
+[node name="Player" parent="." unique_id=1095986329 instance=ExtResource("2_sasra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.21253, -4.2441015, -15.362464)
+
+[node name="camera" type="Camera3D" parent="." unique_id=1170732276]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 0.9077775, 0.4194521, 0, -0.4194521, 0.9077775, -11.929856, 1.7265861, 13.079891)
+current = true
+fov = 45.0
+
+[node name="DeathBlock" parent="." unique_id=515951802 instance=ExtResource("3_sasra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1893635, -5.827299, -3.3104286)
+
+[node name="Projetil" parent="." unique_id=1588599541 instance=ExtResource("4_coq8p")]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1635985473]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.31061, -3.4224055, -7.022704)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+size = Vector3(1, 3.765625, 9.79303)
